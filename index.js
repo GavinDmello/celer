@@ -14,28 +14,24 @@ class einfach {
     }
 
     get(url, handler) {
-        this.newUrl = 'get' + url
-        router.when(this.newUrl, handler)
+        router.when(url, handler)
     }
 
     post(url, handler) {
-        this.newUrl = 'post' + url
-        router.when(this.newUrl, handler)
+        router.when(url, handler)
     }
 
     put(url, handler) {
-        this.newUrl = 'put' + url
-        router.when(this.newUrl, handler)
+
+        router.when(url, handler)
     }
 
     head(url, handler) {
-        this.newUrl = 'head' + url
-        router.when(this.newUrl, handler)
+        router.when(url, handler)
     }
 
     patch(url, handler) {
-        this.newUrl = 'patch' + url
-        router.when(this.newUrl, handler)
+        router.when(url, handler)
     }
 
 
