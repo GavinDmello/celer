@@ -1,0 +1,19 @@
+{
+  "name": "einfach",
+  "version": "0.1.0",
+  "description": "A dead simple Rest framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "http",
+    "https"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "url-trim": "^1.0.0"
+  }
+}
