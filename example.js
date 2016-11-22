@@ -2,7 +2,7 @@ const http = require('http');
 const Einfach = require('./index')
 const einfach = new Einfach()
 
-const PORT=8080; 
+const PORT=8080
 
 einfach.get('/hi', function (req, res) {
   res.send('Hello World')
