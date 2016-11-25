@@ -1,4 +1,4 @@
-const Router = require('./lib/router.js')
+const Router = require('./lib/object-router.js')
 const router = new Router()
 
 class einfach {

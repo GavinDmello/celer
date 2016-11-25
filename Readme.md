@@ -1,5 +1,5 @@
 # Einfach
-A very simple rest implementation based on pure string matching and events. 
+A very simple REST implementation based on pure string matching and events.
 
 -------------------------------------------------------
 ### Here is an example of the the usage :-
