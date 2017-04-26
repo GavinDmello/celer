@@ -1,19 +1,20 @@
+
 const http = require('http');
-const Einfach = require('./index')
-const einfach = new Einfach()
+const Celer = require('./index')
+const celer = new Celer()
 
 const PORT = 8888
 
-einfach.get('/hi', function(req, res) {
+celer.get('/hi', function(req, res) {
     res.send('Hello World')
 })
 
-einfach.post('/hi', function(req, res) {
+celer.post('/hi', function(req, res) {
     res.send('Hello World')
 })
 
-var server = http.createServer(einfach.dispatcher);
+var server = http.createServer(celer.dispatcher)
 
 server.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:%s", PORT);
+    console.log("Server listening on: http://localhost:%s", PORT)
 });

@@ -1,4 +1,4 @@
-# Einfach
+# Celer
 A very simple REST implementation based on pure string matching and events.
 
 -------------------------------------------------------
@@ -8,25 +8,25 @@ A very simple REST implementation based on pure string matching and events.
 ```js
 
 const http = require('http');
-const Einfach = require('./index')
-const einfach = new Einfach()
+const Celer = require('./index')
+const celer = new Celer()
 
 const PORT=8080
 
-einfach.get('/get', function (req, res) {
+celer.get('/get', function (req, res) {
   res.end('Hello World')
 })
 
-einfach.post('/post', function (req, res) {
+celer.post('/post', function (req, res) {
   res.send('Hello World')
 })
 
-einfach.put('/post', function (req, res) {
+celer.put('/post', function (req, res) {
   res.send('Hello World')
 })
 
 
-var server = http.createServer(einfach.dispatcher)
+var server = http.createServer(celer.dispatcher)
 
 server.listen(PORT, function(){
     console.log("Server listening on: http://localhost:%s", PORT)

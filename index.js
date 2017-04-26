@@ -1,11 +1,11 @@
 const Router = require('./lib/object-router.js')
 const router = new Router()
 
-class einfach {
+class celer {
 
     constructor() {
-        if (!(this instanceof einfach)) {
-            return new einfach()
+        if (!(this instanceof celer)) {
+            return new celer()
         }
     }
 
@@ -37,4 +37,4 @@ class einfach {
 
 }
 
-module.exports = einfach
+module.exports = celer
