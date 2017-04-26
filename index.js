@@ -22,7 +22,6 @@ class celer {
     }
 
     put(url, handler) {
-
         router.when(url, handler)
     }
 
