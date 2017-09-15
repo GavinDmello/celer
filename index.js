@@ -14,23 +14,23 @@ class celer {
     }
 
     get(url, handler) {
-        router.when(url, handler)
+        router.when(url, 'get', handler)
     }
 
     post(url, handler) {
-        router.when(url, handler)
+        router.when(url, 'post', handler)
     }
 
     put(url, handler) {
-        router.when(url, handler)
+        router.when(url, 'put', handler)
     }
 
     head(url, handler) {
-        router.when(url, handler)
+        router.when(url, 'head', handler)
     }
 
     patch(url, handler) {
-        router.when(url, handler)
+        router.when(url, 'patch', handler)
     }
 
 
