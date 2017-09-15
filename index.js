@@ -1,12 +1,29 @@
-const Router = require('./lib/object-router.js')
-const router = new Router()
+let router = null
 
-class celer {
+class Celer {
 
-    constructor() {
-        if (!(this instanceof celer)) {
-            return new celer()
+    constructor(opts) {
+        let Router
+        opts = opts || {}
+
+        if (!(this instanceof Celer)) {
+            return new Celer()
         }
+
+        switch (opts.router) {
+            case 'event':
+                Router = require('./lib/event-router')
+                break
+
+            case 'object':
+                Router = require('./lib/object-router')
+                break
+
+            default:
+                Router = require('./lib/object-router')
+        }
+
+        router = new Router()
     }
 
     dispatcher(req, res) {
@@ -36,4 +53,4 @@ class celer {
 
 }
 
-module.exports = celer
+module.exports = Celer
