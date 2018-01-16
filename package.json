@@ -11,8 +11,8 @@
     "http",
     "https"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "@GavinDmello",
+  "license": "MIT",
   "dependencies": {
     "url-trim": "^1.0.0"
   }

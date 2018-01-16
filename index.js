@@ -1,9 +1,8 @@
-let router = null
-
+const http = require('http')
 class Celer {
 
     constructor(opts) {
-        let Router
+        let Router = undefined
         opts = opts || {}
 
         if (!(this instanceof Celer)) {
@@ -23,34 +22,44 @@ class Celer {
                 Router = require('./lib/object-router')
         }
 
-        router = new Router()
+        this.router = new Router()
     }
 
     dispatcher(req, res) {
-        router.send(req, res)
+        this.router.send(req, res)
     }
 
     get(url, handler) {
-        router.when(url, 'get', handler)
+        this.router.when(url, 'get', handler)
     }
 
     post(url, handler) {
-        router.when(url, 'post', handler)
+        this.router.when(url, 'post', handler)
     }
 
     put(url, handler) {
-        router.when(url, 'put', handler)
+        this.router.when(url, 'put', handler)
     }
 
     head(url, handler) {
-        router.when(url, 'head', handler)
+        this.router.when(url, 'head', handler)
     }
 
     patch(url, handler) {
-        router.when(url, 'patch', handler)
+        this.router.when(url, 'patch', handler)
     }
 
 
+    listen(port, callback) {
+        let that = this
+        let server = http.createServer((req, res) => {
+            that.dispatcher(req, res)
+        })
+        callback = callback || noop
+        server.listen(port, callback)
+    }
 }
+
+function noop() {}
 
 module.exports = Celer
