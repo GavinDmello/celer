@@ -7,28 +7,20 @@ A very simple REST implementation based on pure string matching and events.
 
 ```js
 
-const http = require('http');
-const Celer = require('./index')
+const Celer = require('celer')
 const celer = new Celer()
 
-const PORT=8080
+const PORT = 8888
 
-celer.get('/get', function (req, res) {
-  res.end('Hello World')
+celer.get('/hi', function(req, res) {
+    res.send('Hello World')
 })
 
-celer.post('/post', function (req, res) {
-  res.send('Hello World')
+celer.post('/hi', function(req, res) {
+    res.send('Hello World')
 })
 
-celer.put('/post', function (req, res) {
-  res.send('Hello World')
-})
-
-
-var server = http.createServer(celer.dispatcher)
-
-server.listen(PORT, function(){
+celer.listen(PORT, function() {
     console.log("Server listening on: http://localhost:%s", PORT)
 })
 
