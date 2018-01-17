@@ -1,8 +1,15 @@
+/*
+ * Celer - An HTTP framework
+ * Copyright(c) 2017-present @GavinDmello
+ * MIT Licensed
+ */
+
 const http = require('http')
 class Celer {
 
     constructor(opts) {
         let Router = undefined
+        let that = this
         opts = opts || {}
 
         if (!(this instanceof Celer)) {
@@ -23,6 +30,9 @@ class Celer {
         }
 
         this.router = new Router()
+        this.server = http.createServer((req, res) => {
+            that.dispatcher(req, res)
+        })
     }
 
     dispatcher(req, res) {
@@ -49,14 +59,14 @@ class Celer {
         this.router.when(url, 'patch', handler)
     }
 
+    delete(url, handler) {
+        this.router.when(url, 'delete', handler)
+    }
+
 
     listen(port, callback) {
-        let that = this
-        let server = http.createServer((req, res) => {
-            that.dispatcher(req, res)
-        })
         callback = callback || noop
-        server.listen(port, callback)
+        this.server.listen(port, callback)
     }
 }
 
