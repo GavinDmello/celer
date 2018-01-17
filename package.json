@@ -4,7 +4,7 @@
   "description": "A dead simple Rest framework",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./tests/*.js"
+    "test": "./node_modules/mocha/bin/mocha ./test/*.js"
   },
   "keywords": [
     "rest",
