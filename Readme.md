@@ -1,5 +1,5 @@
 # Celer  &nbsp;&nbsp;[![Build Status](https://travis-ci.org/GavinDmello/celer.svg?branch=master)](https://travis-ci.org/GavinDmello/celer.svg?branch=master)&nbsp; [![Coverage Status](https://coveralls.io/repos/github/GavinDmello/celer/badge.svg?branch=master)](https://coveralls.io/github/GavinDmello/celer?branch=master)
-A very simple REST implementation based on pure string matching and events.
+A very simple REST framework implementation based on pure string matching and events.
 
 -------------------------------------------------------
 ### Here is an example of the the usage :-
